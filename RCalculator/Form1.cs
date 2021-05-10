@@ -10,11 +10,46 @@ using System.Windows.Forms;
 
 namespace RCalculator
 {
-    public partial class Form1 : Form
+    public partial class RCalculator : Form
     {
-        public Form1()
+        public RCalculator()
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void number1(object sender, EventArgs e)
+        {
+            textBox1.Text = textBox1.Text + 1;
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+           
+        }       
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+             
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = textBox1.Text + 2;
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
-}
+    }

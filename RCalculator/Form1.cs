@@ -24,7 +24,7 @@ namespace RCalculator
 
         private void number1(object sender, EventArgs e)
         {
-            textBox1.Text = textBox1.Text + 1;
+            txtbx.Text = txtbx.Text + 1;
         }
 
         private void button15_Click(object sender, EventArgs e)
@@ -44,12 +44,17 @@ namespace RCalculator
 
         private void button2_Click(object sender, EventArgs e)
         {
-            textBox1.Text = textBox1.Text + 2;
+            txtbx.Text = txtbx.Text + 2;
         }
 
         private void button13_Click(object sender, EventArgs e)
         {
            
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            txtbx.Text = txtbx.Text + 3;
         }
     }
     }

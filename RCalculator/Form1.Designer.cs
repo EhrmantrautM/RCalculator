@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RCalculator));
-            this.Number1 = new System.Windows.Forms.Button();
+            this.Btn1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -44,19 +44,19 @@
             this.button13 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtbx = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // Number1
+            // Btn1
             // 
-            this.Number1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.Number1.Location = new System.Drawing.Point(12, 179);
-            this.Number1.Name = "Number1";
-            this.Number1.Size = new System.Drawing.Size(58, 61);
-            this.Number1.TabIndex = 0;
-            this.Number1.Text = "1";
-            this.Number1.UseVisualStyleBackColor = true;
-            this.Number1.Click += new System.EventHandler(this.number1);
+            this.Btn1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.Btn1.Location = new System.Drawing.Point(12, 179);
+            this.Btn1.Name = "Btn1";
+            this.Btn1.Size = new System.Drawing.Size(58, 61);
+            this.Btn1.TabIndex = 0;
+            this.Btn1.Text = "1";
+            this.Btn1.UseVisualStyleBackColor = true;
+            this.Btn1.Click += new System.EventHandler(this.number1);
             // 
             // button2
             // 
@@ -78,6 +78,7 @@
             this.button3.TabIndex = 2;
             this.button3.Text = "3";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -202,19 +203,18 @@
             this.button15.UseVisualStyleBackColor = true;
             this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
-            // textBox1
+            // txtbx
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox1.Location = new System.Drawing.Point(12, 12);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(251, 53);
-            this.textBox1.TabIndex = 15;
-            this.textBox1.Text = " ";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtbx.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.txtbx.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtbx.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.txtbx.Location = new System.Drawing.Point(12, 12);
+            this.txtbx.Multiline = true;
+            this.txtbx.Name = "txtbx";
+            this.txtbx.Size = new System.Drawing.Size(251, 53);
+            this.txtbx.TabIndex = 15;
+            this.txtbx.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtbx.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // RCalculator
             // 
@@ -225,7 +225,7 @@
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(275, 446);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtbx);
             this.Controls.Add(this.button15);
             this.Controls.Add(this.button14);
             this.Controls.Add(this.button13);
@@ -240,7 +240,7 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.Number1);
+            this.Controls.Add(this.Btn1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -255,7 +255,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button Number1;
+        private System.Windows.Forms.Button Btn1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
@@ -270,7 +270,7 @@
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtbx;
     }
 }
 

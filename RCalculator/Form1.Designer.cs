@@ -283,6 +283,7 @@
             this.btndel.TabIndex = 25;
             this.btndel.Text = "↢";
             this.btndel.UseVisualStyleBackColor = false;
+            this.btndel.Click += new System.EventHandler(this.btndel_Click);
             // 
             // crdlab
             // 

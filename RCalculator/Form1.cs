@@ -52,35 +52,74 @@ namespace RCalculator
         }
         private void btn4_Click(object sender, EventArgs e)
         {
-            txtbx.Text = txtbx.Text + "4";
+            if (OperationPress)
+            {
+                num1 = txtbx.Text;
+                txtbx.Text = "";
+            }
+            txtbx.Text += "4";
+            OperationPress = false;
         }
         private void btn5_Click(object sender, EventArgs e)
         {
-            txtbx.Text = txtbx.Text + "5";
+            if (OperationPress)
+            {
+                num1 = txtbx.Text;
+                txtbx.Text = "";
+            }
+            txtbx.Text += "5";
+            OperationPress = false;
         }
 
         private void btn6_Click(object sender, EventArgs e)
         {
-            txtbx.Text = txtbx.Text + "6";
+            if (OperationPress)
+            {
+                num1 = txtbx.Text;
+                txtbx.Text = "";
+            }
+            txtbx.Text += "6";
+            OperationPress = false;
         }
-
         private void btn7_Click(object sender, EventArgs e)
         {
+            if (OperationPress)
+            {
+                num1 = txtbx.Text;
+                txtbx.Text = "";
+            }
             txtbx.Text = txtbx.Text + "7";
+            OperationPress = false;
         }
-
         private void btn8_Click(object sender, EventArgs e)
         {
-            txtbx.Text = txtbx.Text + "8";
+            if (OperationPress)
+            {
+                num1 = txtbx.Text;
+                txtbx.Text = "";
+            }
+            txtbx.Text += "8";
+            OperationPress = false;
         }
-
         private void btn9_Click(object sender, EventArgs e)
         {
-            txtbx.Text = txtbx.Text + "9";
+            if (OperationPress)
+            {
+                num1 = txtbx.Text;
+                txtbx.Text = "";
+            }
+            txtbx.Text += "9";
+            OperationPress = false;
         }
         private void btn0_Click(object sender, EventArgs e)
         {
-            txtbx.Text = txtbx.Text + "0";
+            if (OperationPress)
+            {
+                num1 = txtbx.Text;
+                txtbx.Text = "";
+            }
+            txtbx.Text += "0";
+            OperationPress = false;
         }
         private void btnpls_Click(object sender, EventArgs e)
         {
@@ -104,7 +143,8 @@ namespace RCalculator
         }
         private void btnx2_Click(object sender, EventArgs e)
         {
-
+            operation = "x*x";
+            OperationPress = true;
         }
         private void btnequal_Click(object sender, EventArgs e)
         {
@@ -120,18 +160,25 @@ namespace RCalculator
                     txtbx.Text = (float.Parse(num1) / float.Parse(txtbx.Text)).ToString();
                     break;
                 case "*":
-                    txtbx.Text = (float.Parse(num1) / float.Parse(txtbx.Text)).ToString();
+                    txtbx.Text = (float.Parse(num1) * float.Parse(txtbx.Text)).ToString();
+                    break;
+                case "x2":
+                    txtbx.Text = (float.Parse(num1) * float.Parse(num1)).ToString();
                     break;
                 default:
                     break;
-            }   
-
+            }
         }
+        private void btndel_Click(object sender, EventArgs e)
+        {
+            if (txtbx.Text.Length > 0)
+            {
+                txtbx.Text = txtbx.Text.Remove(txtbx.Text.Length - 1);
+            }
 
- 
         }
     }
-
+}
 
        
     

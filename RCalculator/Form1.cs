@@ -15,11 +15,12 @@ namespace RCalculator
         String operation = "";
         Boolean OperationPress = false;
         String num1 = "";
+        Double Value = 0;
 
         public RCalculator()
         {
-            InitializeComponent();
-        }
+            InitializeComponent();            
+        }            
         private void btn1_Click(object sender, EventArgs e)
         {
             if (OperationPress)
@@ -29,6 +30,7 @@ namespace RCalculator
             }
             txtbx.Text += "1";
             OperationPress = false;
+            
         }
         private void btn2_Click(object sender, EventArgs e)
         {
@@ -143,8 +145,7 @@ namespace RCalculator
         }
         private void btnx2_Click(object sender, EventArgs e)
         {
-            operation = "x*x";
-            OperationPress = true;
+
         }
         private void btnequal_Click(object sender, EventArgs e)
         {
@@ -161,21 +162,27 @@ namespace RCalculator
                     break;
                 case "*":
                     txtbx.Text = (float.Parse(num1) * float.Parse(txtbx.Text)).ToString();
-                    break;
-                case "x2":
-                    txtbx.Text = (float.Parse(num1) * float.Parse(num1)).ToString();
-                    break;
+                    break;               
                 default:
                     break;
             }
-        }
+        }   
         private void btndel_Click(object sender, EventArgs e)
         {
             if (txtbx.Text.Length > 0)
             {
                 txtbx.Text = txtbx.Text.Remove(txtbx.Text.Length - 1);
+                txtbx.Text = "0";
             }
-
+        }         
+        private void btnCE_Click(object sender, EventArgs e)
+        {
+            txtbx.Text = "0";
+        }
+        private void btnC_Click_1(object sender, EventArgs e)
+        {
+            txtbx.Text = "0";
+            Value = 0;
         }
     }
 }

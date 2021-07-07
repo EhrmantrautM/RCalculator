@@ -42,7 +42,6 @@
             this.btn1 = new System.Windows.Forms.Button();
             this.btn2 = new System.Windows.Forms.Button();
             this.btn3 = new System.Windows.Forms.Button();
-            this.btneq = new System.Windows.Forms.Button();
             this.btnmns = new System.Windows.Forms.Button();
             this.btntms = new System.Windows.Forms.Button();
             this.btnC = new System.Windows.Forms.Button();
@@ -56,6 +55,7 @@
             this.btnMR = new System.Windows.Forms.Button();
             this.btnMC = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnequal = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn4
@@ -178,7 +178,6 @@
             this.txtbx.Size = new System.Drawing.Size(315, 94);
             this.txtbx.TabIndex = 15;
             this.txtbx.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtbx.TextChanged += new System.EventHandler(this.txtbox);
             // 
             // btn1
             // 
@@ -215,18 +214,6 @@
             this.btn3.Text = "3";
             this.btn3.UseVisualStyleBackColor = false;
             this.btn3.Click += new System.EventHandler(this.btn3_Click);
-            // 
-            // btneq
-            // 
-            this.btneq.BackColor = System.Drawing.Color.Snow;
-            this.btneq.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.btneq.Location = new System.Drawing.Point(268, 380);
-            this.btneq.Name = "btneq";
-            this.btneq.Size = new System.Drawing.Size(59, 61);
-            this.btneq.TabIndex = 19;
-            this.btneq.Text = "=";
-            this.btneq.UseVisualStyleBackColor = false;
-            this.btneq.Click += new System.EventHandler(this.btneq_Click);
             // 
             // btnmns
             // 
@@ -284,6 +271,7 @@
             this.btnx2.TabIndex = 24;
             this.btnx2.Text = "     2\r\nx";
             this.btnx2.UseVisualStyleBackColor = false;
+            this.btnx2.Click += new System.EventHandler(this.btnx2_Click);
             // 
             // btndel
             // 
@@ -372,6 +360,18 @@
             this.button1.Text = ".";
             this.button1.UseVisualStyleBackColor = false;
             // 
+            // btnequal
+            // 
+            this.btnequal.BackColor = System.Drawing.Color.Snow;
+            this.btnequal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.btnequal.Location = new System.Drawing.Point(268, 380);
+            this.btnequal.Name = "btnequal";
+            this.btnequal.Size = new System.Drawing.Size(58, 61);
+            this.btnequal.TabIndex = 33;
+            this.btnequal.Text = "=";
+            this.btnequal.UseVisualStyleBackColor = false;
+            this.btnequal.Click += new System.EventHandler(this.btnequal_Click);
+            // 
             // RCalculator
             // 
             this.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
@@ -381,6 +381,7 @@
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(335, 461);
+            this.Controls.Add(this.btnequal);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnMC);
             this.Controls.Add(this.btnMR);
@@ -394,7 +395,6 @@
             this.Controls.Add(this.btnC);
             this.Controls.Add(this.btntms);
             this.Controls.Add(this.btnmns);
-            this.Controls.Add(this.btneq);
             this.Controls.Add(this.btn3);
             this.Controls.Add(this.btn2);
             this.Controls.Add(this.btn1);
@@ -416,7 +416,6 @@
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculator";
-            this.Load += new System.EventHandler(this.calculator);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -436,7 +435,6 @@
         private System.Windows.Forms.Button btn1;
         private System.Windows.Forms.Button btn2;
         private System.Windows.Forms.Button btn3;
-        private System.Windows.Forms.Button btneq;
         private System.Windows.Forms.Button btnmns;
         private System.Windows.Forms.Button btntms;
         private System.Windows.Forms.Button btnC;
@@ -450,6 +448,7 @@
         private System.Windows.Forms.Button btnMR;
         private System.Windows.Forms.Button btnMC;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnequal;
     }
 }
 

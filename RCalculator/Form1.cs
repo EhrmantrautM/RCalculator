@@ -15,7 +15,7 @@ namespace RCalculator
         String operation = "";
         Boolean OperationPress = false;
         String num1 = "";
-        Double Value = 0;
+        String num2 = "";
 
         public RCalculator()
         {
@@ -192,7 +192,7 @@ namespace RCalculator
         private void btnC_Click_1(object sender, EventArgs e)
         {
             txtbx.Text = "0";
-            Value = 0;
+            
         }
 
         private void btnngtn_Click(object sender, EventArgs e)
@@ -210,6 +210,16 @@ namespace RCalculator
             recip = 1 / recip;
             txtbx.Text = System.Convert.ToString(recip);
 
+        }
+
+        private void RCalculator_Load(object sender, EventArgs e)
+        {
+            
+
+        }
+        private void btnpoint_Click(object sender, EventArgs e)
+        {
+            txtbx.Text = txtbx.Text + "." + num2;
         }
     }
 }

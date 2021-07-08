@@ -355,6 +355,7 @@
             this.btnpoint.TabIndex = 32;
             this.btnpoint.Text = ".";
             this.btnpoint.UseVisualStyleBackColor = false;
+            this.btnpoint.Click += new System.EventHandler(this.btnpoint_Click);
             // 
             // btnequal
             // 
@@ -473,6 +474,7 @@
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculator";
+            this.Load += new System.EventHandler(this.RCalculator_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

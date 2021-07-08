@@ -55,10 +55,11 @@
             this.btnMC = new System.Windows.Forms.Button();
             this.btnpoint = new System.Windows.Forms.Button();
             this.btnequal = new System.Windows.Forms.Button();
-            this.btnx2 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnrecip = new System.Windows.Forms.Button();
+            this.btnngtn = new System.Windows.Forms.Button();
             this.btnpercent = new System.Windows.Forms.Button();
             this.btnsqrt = new System.Windows.Forms.Button();
+            this.resultlabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btn4
@@ -367,27 +368,29 @@
             this.btnequal.UseVisualStyleBackColor = false;
             this.btnequal.Click += new System.EventHandler(this.btnequal_Click);
             // 
-            // btnx2
+            // btnrecip
             // 
-            this.btnx2.BackColor = System.Drawing.Color.Snow;
-            this.btnx2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnx2.Location = new System.Drawing.Point(268, 178);
-            this.btnx2.Name = "btnx2";
-            this.btnx2.Size = new System.Drawing.Size(58, 61);
-            this.btnx2.TabIndex = 34;
-            this.btnx2.Text = "1/x";
-            this.btnx2.UseVisualStyleBackColor = false;
+            this.btnrecip.BackColor = System.Drawing.Color.Snow;
+            this.btnrecip.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnrecip.Location = new System.Drawing.Point(268, 178);
+            this.btnrecip.Name = "btnrecip";
+            this.btnrecip.Size = new System.Drawing.Size(58, 61);
+            this.btnrecip.TabIndex = 34;
+            this.btnrecip.Text = "1/x";
+            this.btnrecip.UseVisualStyleBackColor = false;
+            this.btnrecip.Click += new System.EventHandler(this.btnrecip_Click);
             // 
-            // button2
+            // btnngtn
             // 
-            this.button2.BackColor = System.Drawing.Color.Snow;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.button2.Location = new System.Drawing.Point(268, 246);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(58, 61);
-            this.button2.TabIndex = 35;
-            this.button2.Text = "+-";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnngtn.BackColor = System.Drawing.Color.Snow;
+            this.btnngtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.btnngtn.Location = new System.Drawing.Point(268, 246);
+            this.btnngtn.Name = "btnngtn";
+            this.btnngtn.Size = new System.Drawing.Size(58, 61);
+            this.btnngtn.TabIndex = 35;
+            this.btnngtn.Text = "+-";
+            this.btnngtn.UseVisualStyleBackColor = false;
+            this.btnngtn.Click += new System.EventHandler(this.btnngtn_Click);
             // 
             // btnpercent
             // 
@@ -410,6 +413,17 @@
             this.btnsqrt.TabIndex = 39;
             this.btnsqrt.Text = "√";
             this.btnsqrt.UseVisualStyleBackColor = false;
+            this.btnsqrt.Click += new System.EventHandler(this.btnsqrt_Click);
+            // 
+            // resultlabel
+            // 
+            this.resultlabel.BackColor = System.Drawing.Color.Snow;
+            this.resultlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resultlabel.ForeColor = System.Drawing.Color.DimGray;
+            this.resultlabel.Location = new System.Drawing.Point(15, 73);
+            this.resultlabel.Name = "resultlabel";
+            this.resultlabel.Size = new System.Drawing.Size(171, 29);
+            this.resultlabel.TabIndex = 40;
             // 
             // RCalculator
             // 
@@ -420,10 +434,11 @@
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(335, 525);
+            this.Controls.Add(this.resultlabel);
             this.Controls.Add(this.btnsqrt);
             this.Controls.Add(this.btnpercent);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.btnx2);
+            this.Controls.Add(this.btnngtn);
+            this.Controls.Add(this.btnrecip);
             this.Controls.Add(this.btnequal);
             this.Controls.Add(this.btnpoint);
             this.Controls.Add(this.btnMC);
@@ -490,10 +505,11 @@
         private System.Windows.Forms.Button btnMC;
         private System.Windows.Forms.Button btnpoint;
         private System.Windows.Forms.Button btnequal;
-        private System.Windows.Forms.Button btnx2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnrecip;
+        private System.Windows.Forms.Button btnngtn;
         private System.Windows.Forms.Button btnpercent;
         private System.Windows.Forms.Button btnsqrt;
+        private System.Windows.Forms.Label resultlabel;
     }
 }
 

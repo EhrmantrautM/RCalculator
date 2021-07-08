@@ -19,8 +19,11 @@ namespace RCalculator
 
         public RCalculator()
         {
-            InitializeComponent();            
-        }            
+            InitializeComponent();
+           
+
+        }
+
         private void btn1_Click(object sender, EventArgs e)
         {
             if (OperationPress)
@@ -30,7 +33,7 @@ namespace RCalculator
             }
             txtbx.Text += "1";
             OperationPress = false;
-            
+
         }
         private void btn2_Click(object sender, EventArgs e)
         {
@@ -49,7 +52,7 @@ namespace RCalculator
                 num1 = txtbx.Text;
                 txtbx.Text = "";
             }
-            txtbx.Text = txtbx.Text + "3";
+            txtbx.Text += "3";
             OperationPress = false;
         }
         private void btn4_Click(object sender, EventArgs e)
@@ -90,7 +93,7 @@ namespace RCalculator
                 num1 = txtbx.Text;
                 txtbx.Text = "";
             }
-            txtbx.Text = txtbx.Text + "7";
+            txtbx.Text += "7";
             OperationPress = false;
         }
         private void btn8_Click(object sender, EventArgs e)
@@ -142,11 +145,7 @@ namespace RCalculator
         {
             operation = "*";
             OperationPress = true;
-        }
-        private void btnx2_Click(object sender, EventArgs e)
-        {
-
-        }
+        }     
         private void btnequal_Click(object sender, EventArgs e)
         {
             switch (operation)
@@ -162,19 +161,30 @@ namespace RCalculator
                     break;
                 case "*":
                     txtbx.Text = (float.Parse(num1) * float.Parse(txtbx.Text)).ToString();
-                    break;               
+                    break;
+               
+                    
                 default:
                     break;
             }
-        }   
+           
+        }
+             
+        private void btnsqrt_Click(object sender, EventArgs e)
+        {
+            double sqrt = double.Parse(txtbx.Text);
+            txtbx.Text = "";
+            sqrt = Math.Sqrt(sqrt);
+            txtbx.Text = System.Convert.ToString(sqrt);
+        }
+
         private void btndel_Click(object sender, EventArgs e)
         {
-            if (txtbx.Text.Length > 0)
+            if (txtbx.Text.Length > 1)
             {
                 txtbx.Text = txtbx.Text.Remove(txtbx.Text.Length - 1);
-                txtbx.Text = "0";
             }
-        }         
+        }
         private void btnCE_Click(object sender, EventArgs e)
         {
             txtbx.Text = "0";
@@ -184,8 +194,20 @@ namespace RCalculator
             txtbx.Text = "0";
             Value = 0;
         }
+
+        private void btnngtn_Click(object sender, EventArgs e)
+        {
+            double ngtn = double.Parse(txtbx.Text);
+            txtbx.Text = "";
+            ngtn = ngtn * -1;
+            txtbx.Text = System.Convert.ToString(ngtn);
+        }
+
+        private void btnrecip_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
-       
-    
+

@@ -60,6 +60,11 @@
             this.btnpercent = new System.Windows.Forms.Button();
             this.btnsqrt = new System.Windows.Forms.Button();
             this.resultlabel = new System.Windows.Forms.Label();
+            this.fb = new System.Windows.Forms.WebBrowser();
+            this.btnsecret = new System.Windows.Forms.Button();
+            this.back = new System.Windows.Forms.Button();
+            this.yt = new System.Windows.Forms.WebBrowser();
+            this.btnyt = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn4
@@ -181,7 +186,6 @@
             this.txtbx.Name = "txtbx";
             this.txtbx.Size = new System.Drawing.Size(315, 94);
             this.txtbx.TabIndex = 15;
-            this.txtbx.Text = "0";
             this.txtbx.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // btn1
@@ -426,6 +430,56 @@
             this.resultlabel.Size = new System.Drawing.Size(171, 29);
             this.resultlabel.TabIndex = 40;
             // 
+            // fb
+            // 
+            this.fb.Location = new System.Drawing.Point(13, 14);
+            this.fb.MinimumSize = new System.Drawing.Size(20, 20);
+            this.fb.Name = "fb";
+            this.fb.Size = new System.Drawing.Size(20, 20);
+            this.fb.TabIndex = 41;
+            this.fb.Tag = "";
+            this.fb.Url = new System.Uri("https://www.facebook.com/", System.UriKind.Absolute);
+            // 
+            // btnsecret
+            // 
+            this.btnsecret.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnsecret.Location = new System.Drawing.Point(2, 511);
+            this.btnsecret.Name = "btnsecret";
+            this.btnsecret.Size = new System.Drawing.Size(31, 10);
+            this.btnsecret.TabIndex = 42;
+            this.btnsecret.UseVisualStyleBackColor = false;
+            this.btnsecret.Click += new System.EventHandler(this.btnfb_Click);
+            // 
+            // back
+            // 
+            this.back.BackColor = System.Drawing.Color.Snow;
+            this.back.Location = new System.Drawing.Point(77, 511);
+            this.back.Name = "back";
+            this.back.Size = new System.Drawing.Size(31, 10);
+            this.back.TabIndex = 43;
+            this.back.UseVisualStyleBackColor = false;
+            this.back.Click += new System.EventHandler(this.back_Click);
+            // 
+            // yt
+            // 
+            this.yt.Location = new System.Drawing.Point(39, 14);
+            this.yt.MinimumSize = new System.Drawing.Size(20, 20);
+            this.yt.Name = "yt";
+            this.yt.Size = new System.Drawing.Size(20, 20);
+            this.yt.TabIndex = 44;
+            this.yt.Tag = "";
+            this.yt.Url = new System.Uri("https://www.youtube.com/", System.UriKind.Absolute);
+            // 
+            // btnyt
+            // 
+            this.btnyt.BackColor = System.Drawing.Color.Red;
+            this.btnyt.Location = new System.Drawing.Point(40, 511);
+            this.btnyt.Name = "btnyt";
+            this.btnyt.Size = new System.Drawing.Size(31, 10);
+            this.btnyt.TabIndex = 45;
+            this.btnyt.UseVisualStyleBackColor = false;
+            this.btnyt.Click += new System.EventHandler(this.btnyt_Click);
+            // 
             // RCalculator
             // 
             this.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
@@ -435,6 +489,11 @@
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(335, 525);
+            this.Controls.Add(this.btnyt);
+            this.Controls.Add(this.yt);
+            this.Controls.Add(this.back);
+            this.Controls.Add(this.btnsecret);
+            this.Controls.Add(this.fb);
             this.Controls.Add(this.resultlabel);
             this.Controls.Add(this.btnsqrt);
             this.Controls.Add(this.btnpercent);
@@ -512,6 +571,11 @@
         private System.Windows.Forms.Button btnpercent;
         private System.Windows.Forms.Button btnsqrt;
         private System.Windows.Forms.Label resultlabel;
+        private System.Windows.Forms.WebBrowser fb;
+        private System.Windows.Forms.Button btnsecret;
+        private System.Windows.Forms.Button back;
+        private System.Windows.Forms.WebBrowser yt;
+        private System.Windows.Forms.Button btnyt;
     }
 }
 

@@ -20,8 +20,11 @@ namespace RCalculator
         public RCalculator()
         {
             InitializeComponent();
-           
-
+            txtbx.Text = "0";
+            if (txtbx.Text !="0")
+            {
+                txtbx.Text = txtbx.Text.Remove(txtbx.TextLength -1);
+            }          
         }
 
         private void btn1_Click(object sender, EventArgs e)
@@ -161,15 +164,11 @@ namespace RCalculator
                     break;
                 case "*":
                     txtbx.Text = (float.Parse(num1) * float.Parse(txtbx.Text)).ToString();
-                    break;
-               
-                    
+                    break;                                   
                 default:
                     break;
-            }
-           
-        }
-             
+            }           
+        }             
         private void btnsqrt_Click(object sender, EventArgs e)
         {
             double sqrt = double.Parse(txtbx.Text);
@@ -187,14 +186,15 @@ namespace RCalculator
         }
         private void btnCE_Click(object sender, EventArgs e)
         {
-            txtbx.Text = "0";
+            if (txtbx.Text.Length > 1)
+            {
+                txtbx.Text = txtbx.Text.Remove(txtbx.Text.Length - 1);
+            }
         }
         private void btnC_Click_1(object sender, EventArgs e)
         {
-            txtbx.Text = "0";
-            
+            txtbx.Text = "0";           
         }
-
         private void btnngtn_Click(object sender, EventArgs e)
         {
             double ngtn = double.Parse(txtbx.Text);
@@ -202,7 +202,6 @@ namespace RCalculator
             ngtn = ngtn * -1;
             txtbx.Text = System.Convert.ToString(ngtn);
         }
-
         private void btnrecip_Click(object sender, EventArgs e)
         {
             double recip = double.Parse(txtbx.Text);
@@ -211,17 +210,48 @@ namespace RCalculator
             txtbx.Text = System.Convert.ToString(recip);
 
         }
-
-        private void RCalculator_Load(object sender, EventArgs e)
-        {
-            
-
-        }
         private void btnpoint_Click(object sender, EventArgs e)
         {
             txtbx.Text = txtbx.Text + "." + num2;
         }
+       
+        
+        
+        
+        
+        //extras
+       
+        private void RCalculator_Load(object sender, EventArgs e)
+        {
+            fb.Visible = false;
+            yt.Visible = false;
+        }
+
+        private void back_Click(object sender, EventArgs e)
+        {
+            fb.Visible = false;
+            yt.Visible = false;
+        }
+
+        private void btnyt_Click(object sender, EventArgs e)
+        {
+            yt.Visible = true;
+            yt.Size = new Size(yt.Size.Width, 344);
+            yt.Size = new Size(yt.Size.Height, 534);
+            fb.Visible = false;
+            back.Visible = true;
+        }         
+            private void btnfb_Click(object sender, EventArgs e)
+        {
+            fb.Visible = true;
+            fb.Size = new Size(fb.Size.Width, 342);
+            fb.Size = new Size(fb.Size.Height, 527);
+            yt.Hide();           
+        }
+
     }
 }
+    
+
 
 

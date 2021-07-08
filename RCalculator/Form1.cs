@@ -205,6 +205,10 @@ namespace RCalculator
 
         private void btnrecip_Click(object sender, EventArgs e)
         {
+            double recip = double.Parse(txtbx.Text);
+            txtbx.Text = "";
+            recip = 1 / recip;
+            txtbx.Text = System.Convert.ToString(recip);
 
         }
     }

@@ -15,14 +15,14 @@ namespace RCalculator
         String operation = "";
         Boolean OperationPress = false;
         String num1 = "";
-        String num2 = ""; 
+        String num2 = "";
+        Double memory = 0;
 
         public RCalculator()
         {
             InitializeComponent();
 
         }
-
         private void btn1_Click(object sender, EventArgs e)
         {
             if (OperationPress)
@@ -43,6 +43,7 @@ namespace RCalculator
             }
             txtbx.Text += "2";
             OperationPress = false;
+
         }
         private void btn3_Click(object sender, EventArgs e)
         {
@@ -129,6 +130,7 @@ namespace RCalculator
         {
             operation = "+";
             OperationPress = true;
+
         }
         private void btnmns_Click(object sender, EventArgs e)
         {
@@ -164,6 +166,8 @@ namespace RCalculator
                 default:
                     break;
             }
+            btnCE.Enabled = false;
+            btndel.Enabled = false;
         }
         private void btnsqrt_Click(object sender, EventArgs e)
         {
@@ -185,11 +189,15 @@ namespace RCalculator
             if (txtbx.Text.Length > 1)
             {
                 txtbx.Text = txtbx.Text.Remove(txtbx.Text.Length - 1);
+
             }
         }
         private void btnC_Click_1(object sender, EventArgs e)
         {
             txtbx.Text = "0";
+            btnCE.Enabled = true;
+            btndel.Enabled = true;
+
         }
         private void btnngtn_Click(object sender, EventArgs e)
         {
@@ -217,35 +225,10 @@ namespace RCalculator
             txtbx.Text = txtbx.Text + "." + num2;
         }
         //extras
-   
 
-        private void back_Click(object sender, EventArgs e)
-        {
-            fb.Visible = false;
-            ytb.Visible = false;
-        }
-        private void btnfb_Click(object sender, EventArgs e)
-        {
-            fb.Visible = true;
-            fb.Size = new Size(fb.Size.Width, 344);
-            fb.Size = new Size(fb.Size.Height, 512);
-            ytb.Visible = false;            
-        }
-        private void btnytb_Click(object sender, EventArgs e)
-        {
-            ytb.Visible = true;
-            ytb.Size = new Size(ytb.Size.Width, 344);
-            ytb.Size = new Size(ytb.Size.Height, 512);
-            fb.Visible = false;
-        }
 
-        private void RCalculator_Load(object sender, EventArgs e)
-        {
-            
         }
-    
     }
-}
     
 
 

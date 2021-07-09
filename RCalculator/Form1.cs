@@ -21,7 +21,7 @@ namespace RCalculator
         }
         private void btn1_Click(object sender, EventArgs e)
         {
-            if (txtbx.Text =="0")
+            if (txtbx.Text == "0")
             {
                 txtbx.Clear();
             }
@@ -91,7 +91,6 @@ namespace RCalculator
             txtbx.Text += "5";
             ray.OperationPress1 = false;
         }
-
         private void btn6_Click(object sender, EventArgs e)
         {
             if (txtbx.Text == "0")
@@ -166,7 +165,6 @@ namespace RCalculator
         {
             ray.Operation = "+";
             ray.OperationPress1 = true;
-
         }
         private void btnmns_Click(object sender, EventArgs e)
         {
@@ -212,7 +210,6 @@ namespace RCalculator
             sqrt = Math.Sqrt(sqrt);
             txtbx.Text = System.Convert.ToString(sqrt);
         }
-
         private void btndel_Click(object sender, EventArgs e)
         {
             if (txtbx.Text.Length > 1)
@@ -260,11 +257,18 @@ namespace RCalculator
             txtbx.Text = txtbx.Text + "." + ray.Num2;
         }
         //extras
-
-
+        private void back_Click(object sender, EventArgs e)
+        {
+            secret.Visible = false;
+            btnsecret.Visible = true;
+        }
+        private void btnsecret_Click(object sender, EventArgs e)
+        {
+            secret.Visible = true;
+            secret.Size = new Size(secret.Size.Width, 344);
+            secret.Size = new Size(secret.Size.Height, 512);
+            btnsecret.Visible = false;
         }
     }
-    
-
-
+}
 

@@ -59,7 +59,9 @@
             this.btnngtn = new System.Windows.Forms.Button();
             this.btnpercent = new System.Windows.Forms.Button();
             this.btnsqrt = new System.Windows.Forms.Button();
-            this.resultlabel = new System.Windows.Forms.Label();
+            this.secret = new System.Windows.Forms.WebBrowser();
+            this.back = new System.Windows.Forms.Button();
+            this.btnsecret = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn4
@@ -176,7 +178,7 @@
             this.txtbx.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtbx.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbx.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txtbx.Location = new System.Drawing.Point(12, 12);
+            this.txtbx.Location = new System.Drawing.Point(11, 11);
             this.txtbx.Multiline = true;
             this.txtbx.Name = "txtbx";
             this.txtbx.Size = new System.Drawing.Size(315, 95);
@@ -349,7 +351,7 @@
             // 
             this.btnpoint.BackColor = System.Drawing.Color.Snow;
             this.btnpoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
-            this.btnpoint.Location = new System.Drawing.Point(141, 448);
+            this.btnpoint.Location = new System.Drawing.Point(141, 447);
             this.btnpoint.Name = "btnpoint";
             this.btnpoint.Size = new System.Drawing.Size(58, 61);
             this.btnpoint.TabIndex = 32;
@@ -417,13 +419,37 @@
             this.btnsqrt.UseVisualStyleBackColor = false;
             this.btnsqrt.Click += new System.EventHandler(this.btnsqrt_Click);
             // 
-            // resultlabel
+            // secret
             // 
-            this.resultlabel.BackColor = System.Drawing.Color.Snow;
-            this.resultlabel.Location = new System.Drawing.Point(12, 74);
-            this.resultlabel.Name = "resultlabel";
-            this.resultlabel.Size = new System.Drawing.Size(127, 33);
-            this.resultlabel.TabIndex = 44;
+            this.secret.Location = new System.Drawing.Point(11, 11);
+            this.secret.MinimumSize = new System.Drawing.Size(20, 20);
+            this.secret.Name = "secret";
+            this.secret.Size = new System.Drawing.Size(20, 20);
+            this.secret.TabIndex = 45;
+            this.secret.Url = new System.Uri("https://www.facebook.com/", System.UriKind.Absolute);
+            this.secret.Visible = false;
+            // 
+            // back
+            // 
+            this.back.BackColor = System.Drawing.Color.Snow;
+            this.back.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
+            this.back.Location = new System.Drawing.Point(205, 511);
+            this.back.Name = "back";
+            this.back.Size = new System.Drawing.Size(16, 10);
+            this.back.TabIndex = 46;
+            this.back.UseVisualStyleBackColor = false;
+            this.back.Click += new System.EventHandler(this.back_Click);
+            // 
+            // btnsecret
+            // 
+            this.btnsecret.BackColor = System.Drawing.Color.Snow;
+            this.btnsecret.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
+            this.btnsecret.Location = new System.Drawing.Point(205, 512);
+            this.btnsecret.Name = "btnsecret";
+            this.btnsecret.Size = new System.Drawing.Size(16, 10);
+            this.btnsecret.TabIndex = 47;
+            this.btnsecret.UseVisualStyleBackColor = false;
+            this.btnsecret.Click += new System.EventHandler(this.btnsecret_Click);
             // 
             // RCalculator
             // 
@@ -434,7 +460,9 @@
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(338, 525);
-            this.Controls.Add(this.resultlabel);
+            this.Controls.Add(this.btnsecret);
+            this.Controls.Add(this.back);
+            this.Controls.Add(this.secret);
             this.Controls.Add(this.btnsqrt);
             this.Controls.Add(this.btnpercent);
             this.Controls.Add(this.btnngtn);
@@ -509,7 +537,9 @@
         private System.Windows.Forms.Button btnngtn;
         private System.Windows.Forms.Button btnpercent;
         private System.Windows.Forms.Button btnsqrt;
-        private System.Windows.Forms.Label resultlabel;
+        private System.Windows.Forms.WebBrowser secret;
+        private System.Windows.Forms.Button back;
+        private System.Windows.Forms.Button btnsecret;
     }
 }
 

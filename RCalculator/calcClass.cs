@@ -39,7 +39,6 @@ namespace RCalculator
                 OperationPress = value;
             }
         }
-
         public string Num1
         {
             get
@@ -65,14 +64,12 @@ namespace RCalculator
                 num2 = value;
             }
         }
-
         public double Memory
         {
             get
             {
                 return memory;
             }
-
             set
             {
                 memory = value;

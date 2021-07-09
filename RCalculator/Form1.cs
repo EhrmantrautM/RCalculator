@@ -12,11 +12,7 @@ namespace RCalculator
 {
     public partial class RCalculator : Form
     {
-        String operation = "";
-        Boolean OperationPress = false;
-        String num1 = "";
-        String num2 = "";
-        Double memory = 0;
+        calcClass ray = new calcClass();
 
         public RCalculator()
         {
@@ -25,143 +21,183 @@ namespace RCalculator
         }
         private void btn1_Click(object sender, EventArgs e)
         {
-            if (OperationPress)
+            if (txtbx.Text =="0")
             {
-                num1 = txtbx.Text;
+                txtbx.Clear();
+            }
+            if (ray.OperationPress1)
+            {
+                ray.Num1 = txtbx.Text;
                 txtbx.Text = "";
             }
             txtbx.Text += "1";
-            OperationPress = false;
+            ray.OperationPress1 = false;
 
         }
         private void btn2_Click(object sender, EventArgs e)
         {
-            if (OperationPress)
+            if (txtbx.Text == "0")
             {
-                num1 = txtbx.Text;
+                txtbx.Clear();
+            }
+            if (ray.OperationPress1)
+            {
+                ray.Num1 = txtbx.Text;
                 txtbx.Text = "";
             }
             txtbx.Text += "2";
-            OperationPress = false;
+            ray.OperationPress1 = false;
 
         }
         private void btn3_Click(object sender, EventArgs e)
         {
-            if (OperationPress)
+            if (txtbx.Text == "0")
             {
-                num1 = txtbx.Text;
+                txtbx.Clear();
+            }
+            if (ray.OperationPress1)
+            {
+                ray.Num1 = txtbx.Text;
                 txtbx.Text = "";
             }
             txtbx.Text += "3";
-            OperationPress = false;
+            ray.OperationPress1 = false;
         }
         private void btn4_Click(object sender, EventArgs e)
         {
-            if (OperationPress)
+            if (txtbx.Text == "0")
             {
-                num1 = txtbx.Text;
+                txtbx.Clear();
+            }
+            if (ray.OperationPress1)
+            {
+                ray.Num1 = txtbx.Text;
                 txtbx.Text = "";
             }
             txtbx.Text += "4";
-            OperationPress = false;
+            ray.OperationPress1 = false;
         }
         private void btn5_Click(object sender, EventArgs e)
         {
-            if (OperationPress)
+            if (txtbx.Text == "0")
             {
-                num1 = txtbx.Text;
+                txtbx.Clear();
+            }
+            if (ray.OperationPress1)
+            {
+                ray.Num1 = txtbx.Text;
                 txtbx.Text = "";
             }
             txtbx.Text += "5";
-            OperationPress = false;
+            ray.OperationPress1 = false;
         }
 
         private void btn6_Click(object sender, EventArgs e)
         {
-            if (OperationPress)
+            if (txtbx.Text == "0")
             {
-                num1 = txtbx.Text;
+                txtbx.Clear();
+            }
+            if (ray.OperationPress1)
+            {
+                ray.Num1 = txtbx.Text;
                 txtbx.Text = "";
             }
             txtbx.Text += "6";
-            OperationPress = false;
+            ray.OperationPress1 = false;
         }
         private void btn7_Click(object sender, EventArgs e)
         {
-            if (OperationPress)
+            if (txtbx.Text == "0")
             {
-                num1 = txtbx.Text;
+                txtbx.Clear();
+            }
+            if (ray.OperationPress1)
+            {
+                ray.Num1 = txtbx.Text;
                 txtbx.Text = "";
             }
             txtbx.Text += "7";
-            OperationPress = false;
+            ray.OperationPress1 = false;
         }
         private void btn8_Click(object sender, EventArgs e)
         {
-            if (OperationPress)
+            if (txtbx.Text == "0")
             {
-                num1 = txtbx.Text;
+                txtbx.Clear();
+            }
+            if (ray.OperationPress1)
+            {
+                ray.Num1 = txtbx.Text;
                 txtbx.Text = "";
             }
             txtbx.Text += "8";
-            OperationPress = false;
+            ray.OperationPress1 = false;
         }
         private void btn9_Click(object sender, EventArgs e)
         {
-            if (OperationPress)
+            if (txtbx.Text == "0")
             {
-                num1 = txtbx.Text;
+                txtbx.Clear();
+            }
+            if (ray.OperationPress1)
+            {
+                ray.Num1 = txtbx.Text;
                 txtbx.Text = "";
             }
             txtbx.Text += "9";
-            OperationPress = false;
+            ray.OperationPress1 = false;
         }
         private void btn0_Click(object sender, EventArgs e)
         {
-            if (OperationPress)
+            if (txtbx.Text == "0")
             {
-                num1 = txtbx.Text;
+                txtbx.Clear();
+            }
+            if (ray.OperationPress1)
+            {
+                ray.Num1 = txtbx.Text;
                 txtbx.Text = "";
             }
             txtbx.Text += "0";
-            OperationPress = false;
+            ray.OperationPress1 = false;
         }
         private void btnpls_Click(object sender, EventArgs e)
         {
-            operation = "+";
-            OperationPress = true;
+            ray.Operation = "+";
+            ray.OperationPress1 = true;
 
         }
         private void btnmns_Click(object sender, EventArgs e)
         {
-            operation = "-";
-            OperationPress = true;
+            ray.Operation = "-";
+            ray.OperationPress1 = true;
         }
         private void btndiv_Click(object sender, EventArgs e)
         {
-            operation = "/";
-            OperationPress = true;
+            ray.Operation = "/";
+            ray.OperationPress1 = true;
         }
         private void btntms_Click(object sender, EventArgs e)
         {
-            operation = "*";
-            OperationPress = true;
+            ray.Operation = "*";
+            ray.OperationPress1 = true;
         }
         private void btnequal_Click(object sender, EventArgs e)
         {
-            switch (operation)
+            switch (ray.Operation)
             {
                 case "+":
-                    txtbx.Text = (float.Parse(num1) + float.Parse(txtbx.Text)).ToString();
+                    txtbx.Text = (float.Parse(ray.Num1) + float.Parse(txtbx.Text)).ToString();
                     break;
                 case "-":
-                    txtbx.Text = (float.Parse(num1) - float.Parse(txtbx.Text)).ToString();
+                    txtbx.Text = (float.Parse(ray.Num1) - float.Parse(txtbx.Text)).ToString();
                     break;
                 case "/":
-                    txtbx.Text = (float.Parse(num1) / float.Parse(txtbx.Text)).ToString();
+                    txtbx.Text = (float.Parse(ray.Num1) / float.Parse(txtbx.Text)).ToString();
                     break;
                 case "*":
-                    txtbx.Text = (float.Parse(num1) * float.Parse(txtbx.Text)).ToString();
+                    txtbx.Text = (float.Parse(ray.Num1) * float.Parse(txtbx.Text)).ToString();
                     break;
                 default:
                     break;
@@ -186,10 +222,9 @@ namespace RCalculator
         }
         private void btnCE_Click(object sender, EventArgs e)
         {
-            if (txtbx.Text.Length > 1)
+            if (txtbx.Text.Length > 0)
             {
                 txtbx.Text = txtbx.Text.Remove(txtbx.Text.Length - 1);
-
             }
         }
         private void btnC_Click_1(object sender, EventArgs e)
@@ -222,7 +257,7 @@ namespace RCalculator
         }
         private void btnpoint_Click(object sender, EventArgs e)
         {
-            txtbx.Text = txtbx.Text + "." + num2;
+            txtbx.Text = txtbx.Text + "." + ray.Num2;
         }
         //extras
 

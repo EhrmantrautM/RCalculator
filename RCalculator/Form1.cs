@@ -15,16 +15,12 @@ namespace RCalculator
         String operation = "";
         Boolean OperationPress = false;
         String num1 = "";
-        String num2 = "";
+        String num2 = ""; 
 
         public RCalculator()
         {
             InitializeComponent();
-            txtbx.Text = "0";
-            if (txtbx.Text !="0")
-            {
-                txtbx.Text = txtbx.Text.Remove(txtbx.TextLength -1);
-            }          
+
         }
 
         private void btn1_Click(object sender, EventArgs e)
@@ -35,7 +31,7 @@ namespace RCalculator
                 txtbx.Text = "";
             }
             txtbx.Text += "1";
-            OperationPress = false;            
+            OperationPress = false;
 
         }
         private void btn2_Click(object sender, EventArgs e)
@@ -148,7 +144,7 @@ namespace RCalculator
         {
             operation = "*";
             OperationPress = true;
-        }     
+        }
         private void btnequal_Click(object sender, EventArgs e)
         {
             switch (operation)
@@ -164,11 +160,11 @@ namespace RCalculator
                     break;
                 case "*":
                     txtbx.Text = (float.Parse(num1) * float.Parse(txtbx.Text)).ToString();
-                    break;                                   
+                    break;
                 default:
                     break;
-            }           
-        }             
+            }
+        }
         private void btnsqrt_Click(object sender, EventArgs e)
         {
             double sqrt = double.Parse(txtbx.Text);
@@ -193,7 +189,7 @@ namespace RCalculator
         }
         private void btnC_Click_1(object sender, EventArgs e)
         {
-            txtbx.Text = "0";           
+            txtbx.Text = "0";
         }
         private void btnngtn_Click(object sender, EventArgs e)
         {
@@ -208,7 +204,6 @@ namespace RCalculator
             txtbx.Text = "";
             recip = 1 / recip;
             txtbx.Text = System.Convert.ToString(recip);
-
         }
         private void btnpercent_Click(object sender, EventArgs e)
         {
@@ -217,47 +212,38 @@ namespace RCalculator
             prcnt = prcnt / 100;
             txtbx.Text = System.Convert.ToString(prcnt);
         }
-
         private void btnpoint_Click(object sender, EventArgs e)
         {
             txtbx.Text = txtbx.Text + "." + num2;
         }
-       
-        
-        
-        
-        
         //extras
-       
-        private void RCalculator_Load(object sender, EventArgs e)
-        {
-            fb.Visible = false;
-            yt.Visible = false;
-        }
+   
 
         private void back_Click(object sender, EventArgs e)
         {
             fb.Visible = false;
-            yt.Visible = false;
+            ytb.Visible = false;
         }
-
-        private void btnyt_Click(object sender, EventArgs e)
-        {
-            yt.Visible = true;
-            yt.Size = new Size(yt.Size.Width, 344);
-            yt.Size = new Size(yt.Size.Height, 534);
-            fb.Visible = false;
-            back.Visible = true;
-        }         
-            private void btnfb_Click(object sender, EventArgs e)
+        private void btnfb_Click(object sender, EventArgs e)
         {
             fb.Visible = true;
-            fb.Size = new Size(fb.Size.Width, 342);
-            fb.Size = new Size(fb.Size.Height, 527);
-            yt.Hide();           
+            fb.Size = new Size(fb.Size.Width, 344);
+            fb.Size = new Size(fb.Size.Height, 512);
+            ytb.Visible = false;            
+        }
+        private void btnytb_Click(object sender, EventArgs e)
+        {
+            ytb.Visible = true;
+            ytb.Size = new Size(ytb.Size.Width, 344);
+            ytb.Size = new Size(ytb.Size.Height, 512);
+            fb.Visible = false;
         }
 
-
+        private void RCalculator_Load(object sender, EventArgs e)
+        {
+            
+        }
+    
     }
 }
     

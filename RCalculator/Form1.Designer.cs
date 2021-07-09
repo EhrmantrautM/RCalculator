@@ -407,6 +407,7 @@
             this.btnpercent.TabIndex = 37;
             this.btnpercent.Text = "%";
             this.btnpercent.UseVisualStyleBackColor = false;
+            this.btnpercent.Click += new System.EventHandler(this.btnpercent_Click);
             // 
             // btnsqrt
             // 

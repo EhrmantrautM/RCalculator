@@ -35,7 +35,7 @@ namespace RCalculator
                 txtbx.Text = "";
             }
             txtbx.Text += "1";
-            OperationPress = false;
+            OperationPress = false;            
 
         }
         private void btn2_Click(object sender, EventArgs e)
@@ -210,6 +210,14 @@ namespace RCalculator
             txtbx.Text = System.Convert.ToString(recip);
 
         }
+        private void btnpercent_Click(object sender, EventArgs e)
+        {
+            double prcnt = double.Parse(txtbx.Text);
+            txtbx.Text = "";
+            prcnt = prcnt / 100;
+            txtbx.Text = System.Convert.ToString(prcnt);
+        }
+
         private void btnpoint_Click(object sender, EventArgs e)
         {
             txtbx.Text = txtbx.Text + "." + num2;
@@ -248,6 +256,7 @@ namespace RCalculator
             fb.Size = new Size(fb.Size.Height, 527);
             yt.Hide();           
         }
+
 
     }
 }

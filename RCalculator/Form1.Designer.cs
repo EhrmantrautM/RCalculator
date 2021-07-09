@@ -59,8 +59,6 @@
             this.btnngtn = new System.Windows.Forms.Button();
             this.btnpercent = new System.Windows.Forms.Button();
             this.btnsqrt = new System.Windows.Forms.Button();
-            this.btnsecret = new System.Windows.Forms.Button();
-            this.back = new System.Windows.Forms.Button();
             this.resultlabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -419,24 +417,6 @@
             this.btnsqrt.UseVisualStyleBackColor = false;
             this.btnsqrt.Click += new System.EventHandler(this.btnsqrt_Click);
             // 
-            // btnsecret
-            // 
-            this.btnsecret.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnsecret.Location = new System.Drawing.Point(150, 511);
-            this.btnsecret.Name = "btnsecret";
-            this.btnsecret.Size = new System.Drawing.Size(31, 10);
-            this.btnsecret.TabIndex = 42;
-            this.btnsecret.UseVisualStyleBackColor = false;
-            // 
-            // back
-            // 
-            this.back.BackColor = System.Drawing.Color.Snow;
-            this.back.Location = new System.Drawing.Point(185, 511);
-            this.back.Name = "back";
-            this.back.Size = new System.Drawing.Size(31, 10);
-            this.back.TabIndex = 43;
-            this.back.UseVisualStyleBackColor = false;
-            // 
             // resultlabel
             // 
             this.resultlabel.BackColor = System.Drawing.Color.Snow;
@@ -455,8 +435,6 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(338, 525);
             this.Controls.Add(this.resultlabel);
-            this.Controls.Add(this.back);
-            this.Controls.Add(this.btnsecret);
             this.Controls.Add(this.btnsqrt);
             this.Controls.Add(this.btnpercent);
             this.Controls.Add(this.btnngtn);
@@ -531,8 +509,6 @@
         private System.Windows.Forms.Button btnngtn;
         private System.Windows.Forms.Button btnpercent;
         private System.Windows.Forms.Button btnsqrt;
-        private System.Windows.Forms.Button btnsecret;
-        private System.Windows.Forms.Button back;
         private System.Windows.Forms.Label resultlabel;
     }
 }
